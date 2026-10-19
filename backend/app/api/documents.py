@@ -13,6 +13,7 @@ from fastapi import (
     File,
     HTTPException,
     Query,
+    Response,
     UploadFile,
     status,
 )
@@ -1161,18 +1162,17 @@ def _export_image(
 )
 def export_document(
     document_id: int,
+    response: Response,
     format: str = Query(
         default="docx",
         pattern="^(docx|pdf|png|jpg|jpeg)$",
     ),
     user: User = Depends(current_user),
     db: Session = Depends(get_db),
-    response: Response | None = None,
 ) -> StreamingResponse:
 
-    if response is not None:
-        response.headers["Cache-Control"] = "no-store"
-        response.headers["Pragma"] = "no-cache"
+    response.headers["Cache-Control"] = "no-store"
+    response.headers["Pragma"] = "no-cache"
 
     document = _owned_document(
         document_id,
