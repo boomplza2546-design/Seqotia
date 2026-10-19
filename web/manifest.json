@@ -1,0 +1,10 @@
+{
+  "name": "Seqotia",
+  "short_name": "Seqotia",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#071B14",
+  "theme_color": "#123B2A",
+  "description": "An elegant AI document workspace.",
+  "orientation": "landscape-primary"
+}

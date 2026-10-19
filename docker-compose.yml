@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: seqotia-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: seqotia
+      POSTGRES_USER: seqotia
+      POSTGRES_PASSWORD: seqotia
+    ports:
+      - '5432:5432'
+    volumes:
+      - seqotia-postgres-data:/var/lib/postgresql/data
+
+volumes:
+  seqotia-postgres-data:

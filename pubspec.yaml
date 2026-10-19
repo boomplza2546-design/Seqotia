@@ -1,21 +1,28 @@
 name: seqotia
-description: Local-first AI document workspace for organizations.
-publish_to: "none"
-version: 0.1.0+1
+
+description: "Seqotia — an elegant AI document workspace for macOS and desktop."
+
+publish_to: 'none'
+
+version: 1.0.0+1
 
 environment:
-  sdk: ">=3.7.0 <4.0.0"
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  dio: ^5.11.1
-  file_picker: ^11.0.3
+  http: ^1.6.0
+  file_picker: ^10.3.10
+  shared_preferences: ^2.5.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^3.0.0
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/

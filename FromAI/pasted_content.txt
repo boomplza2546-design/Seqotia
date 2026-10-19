@@ -1,0 +1,1050 @@
+Build a production-quality macOS-first AI Document Workspace application called:
+
+SEQOTIA
+
+Tagline:
+"Work faster. Documents, simplified."
+
+The core idea is:
+
+Seqotia is not simply a document editor and not simply an AI chatbot.
+
+It is an AI-powered document workspace where users can upload an existing document, understand its structure, and edit it simply by telling the AI what they want to change.
+
+Example:
+
+User uploads:
+"บันทึกติดต่องาน.docx"
+
+Then types:
+
+"เปลี่ยนวันที่จาก 31 มีนาคม 2569 เป็น 5 เมษายน 2569"
+
+The system should understand that the user wants to modify the DATE field in the document, make the change, and show the result immediately.
+
+Another example:
+
+"เปลี่ยนจำนวนเงินจาก 535 บาท เป็น 850 บาท"
+
+The AI should locate the relevant amount in the document and update only that value.
+
+Another example:
+
+"เปลี่ยนชื่อบริษัท ไอ แอนด์ เอ็ม คอนซัลท์จำกัด เป็น บริษัท ABC จำกัด"
+
+The system should find the correct occurrence and modify it.
+
+The goal is to make document editing feel like talking to an intelligent assistant instead of manually editing a Word document.
+
+--------------------------------------------------
+1. PRODUCT VISION
+--------------------------------------------------
+
+Design Seqotia as a premium, elegant, trustworthy macOS application.
+
+Visual direction:
+
+- macOS native feeling
+- Apple-inspired simplicity
+- Glassmorphism
+- Frosted translucent panels
+- Deep forest green / emerald accent
+- Soft gradients
+- Subtle shadows
+- Background imagery inspired by a peaceful forest / nature
+- Elegant typography
+- Generous spacing
+- Minimal interface
+- Smooth animations
+- Premium productivity software feeling
+
+Do NOT make it look like a generic web dashboard.
+
+It should feel like:
+
+Apple productivity software
++
+Notion
++
+Microsoft Word
++
+AI assistant
++
+Modern document automation
+
+The application should communicate:
+
+FAST
+TRUSTWORTHY
+INTELLIGENT
+SIMPLE
+PROFESSIONAL
+
+--------------------------------------------------
+2. MAIN USER FLOW
+--------------------------------------------------
+
+The primary workflow should be:
+
+LOGIN
+↓
+DASHBOARD
+↓
+UPLOAD DOCUMENT
+↓
+AI ANALYZES DOCUMENT
+↓
+DOCUMENT WORKSPACE
+↓
+USER COMMANDS AI
+↓
+AI PROPOSES CHANGE
+↓
+USER PREVIEWS CHANGE
+↓
+APPLY
+↓
+DOCUMENT UPDATED
+↓
+EXPORT / SAVE
+
+The user should never feel that they need to understand document formatting technology.
+
+--------------------------------------------------
+3. LOGIN SCREEN
+--------------------------------------------------
+
+Create a beautiful macOS login screen.
+
+Use:
+
+- Seqotia logo
+- "Seqotia"
+- "Work faster. Documents, simplified."
+- Username
+- Password
+- Remember me
+- Forgot password?
+- Sign In
+- Continue with Apple
+- Security indicator
+
+Use a dark green forest background with a subtle cinematic blurred image.
+
+Create a large frosted glass login card.
+
+The glass should have:
+
+- backdrop blur
+- translucent green/black background
+- thin white border
+- soft glow
+- subtle reflection
+
+The login screen should feel premium rather than corporate.
+
+--------------------------------------------------
+4. DASHBOARD
+--------------------------------------------------
+
+After login, create the main dashboard.
+
+Sidebar:
+
+Seqotia
+Workspace
+
+Navigation:
+
+Dashboard
+Workspace
+Documents
+Templates
+AI Writer
+Projects
+Team Chat
+Contacts
+Settings
+
+Main dashboard:
+
+Welcome back
+
+Quick actions:
+
++ New Document
+Upload Document
+AI Edit
+Create from Template
+Recent Documents
+
+Show:
+
+Recent Documents
+Recently Edited
+AI Activity
+Pending Review
+Templates
+
+Example document cards:
+
+Marketing Report
+Business Proposal
+Project Summary
+Approval Request
+Meeting Report
+
+Each document card should show:
+
+- document icon
+- filename
+- document type
+- last modified
+- status
+- AI processing status
+
+--------------------------------------------------
+5. MOST IMPORTANT SCREEN:
+DOCUMENT WORKSPACE
+--------------------------------------------------
+
+This is the heart of Seqotia.
+
+Create a three-part workspace.
+
+LEFT:
+Document structure / pages
+
+CENTER:
+Document editor / document preview
+
+RIGHT:
+AI Assistant
+
+Top toolbar:
+
+Back
+Document name
+Save status
+Undo
+Redo
+Share
+Export
+More
+
+--------------------------------------------------
+6. DOCUMENT VIEWER / EDITOR
+--------------------------------------------------
+
+When a DOCX/PDF/document is uploaded:
+
+Render the document in a clean paper-like canvas.
+
+The user should see the actual document.
+
+For example:
+
+A4 white page
+with real document formatting.
+
+Allow:
+
+- zoom
+- page navigation
+- text selection
+- search
+- comments
+- highlighting
+- basic manual editing
+
+The document preview must remain visually close to the original document.
+
+Do NOT destroy the original layout when importing it.
+
+--------------------------------------------------
+7. AI ASSISTANT
+--------------------------------------------------
+
+The right side contains:
+
+"Seqotia AI"
+
+Subtitle:
+
+"Tell me what you'd like to change."
+
+Chat interface.
+
+Example:
+
+USER:
+เปลี่ยนวันที่เป็น 5 เมษายน 2569
+
+AI:
+
+I found 1 date matching:
+31 มีนาคม 2569
+
+Change to:
+5 เมษายน 2569
+
+[Preview Change]
+[Apply Change]
+
+--------------------------------------------------
+8. AI EDITING EXPERIENCE
+--------------------------------------------------
+
+This is the key feature.
+
+The AI must not blindly rewrite the entire document.
+
+Instead:
+
+1. Understand the user's instruction.
+2. Analyze the document.
+3. Identify the exact target.
+4. Explain what it found.
+5. Generate a proposed change.
+6. Highlight the affected area.
+7. Allow Preview.
+8. Allow Apply.
+9. Allow Undo.
+
+Example:
+
+User:
+"เปลี่ยน 535 บาท เป็น 850 บาท"
+
+AI response:
+
+Found:
+
+535 บาท
+
+Location:
+Page 1
+Paragraph 6
+
+Proposed change:
+
+535 บาท
+↓
+850 บาท
+
+[Preview]
+[Apply]
+
+After applying:
+
+✓ Changed successfully
+
+[Undo]
+
+--------------------------------------------------
+9. CHANGE HIGHLIGHTING
+--------------------------------------------------
+
+When AI proposes a modification:
+
+Highlight the original text in the document.
+
+Use a subtle green/yellow highlight.
+
+Show:
+
+BEFORE
+535 บาท
+
+AFTER
+850 บาท
+
+Animate the transition subtly.
+
+The user should immediately understand what the AI changed.
+
+--------------------------------------------------
+10. AI SHOULD UNDERSTAND DOCUMENT SEMANTICS
+--------------------------------------------------
+
+Do not treat the document as plain text only.
+
+The AI should understand semantic concepts such as:
+
+- date
+- person
+- organization
+- company
+- address
+- amount
+- subject
+- department
+- recipient
+- sender
+- approval
+- signature
+- document number
+- title
+- paragraph
+- table
+- heading
+- footer
+- attachment
+
+For example:
+
+"เปลี่ยนวันที่"
+
+should be interpreted as a DATE modification.
+
+"เปลี่ยนชื่อบริษัท"
+
+should be interpreted as an ORGANIZATION modification.
+
+"เปลี่ยนยอดเงิน"
+
+should be interpreted as a MONEY modification.
+
+--------------------------------------------------
+11. SMART DOCUMENT ANALYSIS
+--------------------------------------------------
+
+When a document is uploaded, automatically analyze it.
+
+Display:
+
+Analyzing document...
+
+Then:
+
+✓ Document imported
+✓ Structure detected
+✓ 12 paragraphs
+✓ 3 headings
+✓ 2 signatures
+✓ 1 monetary value
+✓ 2 dates
+✓ 1 attachment reference
+
+Create a document structure tree.
+
+Example:
+
+DOCUMENT
+
+├── Header
+├── Document Information
+│   ├── Organization
+│   ├── Subject
+│   ├── Date
+│   └── Recipient
+├── Main Content
+├── Approval
+├── Signature
+└── Footer
+
+This structure will allow the AI to edit documents more accurately.
+
+--------------------------------------------------
+12. NATURAL LANGUAGE COMMANDS
+--------------------------------------------------
+
+The user should be able to type commands naturally.
+
+Examples:
+
+"เปลี่ยนวันที่เป็นวันนี้"
+
+"เปลี่ยนวันที่เป็น 10 เมษายน 2569"
+
+"แก้ชื่อผู้จัดทำเป็น นายสมชาย"
+
+"เปลี่ยนจำนวนเงินเป็น 1,500 บาท"
+
+"ลบย่อหน้าที่พูดถึงเครื่องถ่ายเอกสาร"
+
+"เพิ่มข้อความว่า ได้ดำเนินการเรียบร้อยแล้ว หลังย่อหน้าที่ 2"
+
+"ทำให้ข้อความนี้เป็นทางการขึ้น"
+
+"สรุปเอกสารนี้ให้สั้นลง"
+
+"ตรวจคำผิดให้หน่อย"
+
+"จัดรูปแบบเอกสารให้ดูเป็นทางการ"
+
+"สร้างหัวข้อให้ชัดเจนขึ้น"
+
+"เปลี่ยนคำว่า ผู้จัดการฝ่ายโสตทัศนูปกรณ์/ไอที เป็น ผู้จัดการฝ่ายเทคโนโลยีสารสนเทศ"
+
+"เปลี่ยนทุกคำว่า บริษัท ABC เป็น บริษัท XYZ"
+
+"หาข้อมูลจำนวนเงินทั้งหมดในเอกสาร"
+
+"เอกสารนี้เกี่ยวกับอะไร"
+
+--------------------------------------------------
+13. AI MODIFICATION SAFETY
+--------------------------------------------------
+
+Never silently modify the document.
+
+Every meaningful AI modification should produce:
+
+- What was found
+- What will change
+- Where it will change
+- Before
+- After
+
+Then:
+
+[Apply]
+[Cancel]
+
+For multiple changes:
+
+"3 changes proposed"
+
+1. Date
+2. Company name
+3. Amount
+
+Allow:
+
+[Review All]
+[Apply All]
+
+--------------------------------------------------
+14. VERSION HISTORY
+--------------------------------------------------
+
+Implement document version history.
+
+Example:
+
+Version 4
+Today 10:24 AM
+Changed amount
+
+Version 3
+Today 10:20 AM
+Changed company name
+
+Version 2
+Today 10:15 AM
+Updated date
+
+Version 1
+Original document
+
+Allow:
+
+View
+Restore
+Compare
+
+--------------------------------------------------
+15. DOCUMENT COMPARE
+--------------------------------------------------
+
+Create a visual comparison mode.
+
+BEFORE | AFTER
+
+Use split-screen document comparison.
+
+Changed text should be highlighted.
+
+Example:
+
+31 มีนาคม 2569
+→
+5 เมษายน 2569
+
+535 บาท
+→
+850 บาท
+
+--------------------------------------------------
+16. EXPORT
+--------------------------------------------------
+
+Allow:
+
+Export as:
+
+DOCX
+PDF
+TXT
+
+Preserve formatting as much as possible.
+
+Original document should never be overwritten unless explicitly requested.
+
+Default behavior:
+
+Original
+↓
+Seqotia Edited Version
+
+--------------------------------------------------
+17. FILE SUPPORT
+--------------------------------------------------
+
+MVP should support:
+
+DOCX
+PDF
+TXT
+
+Architecture should allow future support for:
+
+PPTX
+XLSX
+ODT
+Images / OCR
+
+For DOCX:
+
+Prioritize preserving:
+
+- text
+- paragraphs
+- headings
+- tables
+- images
+- alignment
+- font size
+- bold
+- italic
+- underline
+- spacing
+- page structure
+
+--------------------------------------------------
+18. SAMPLE DOCUMENT TEST
+--------------------------------------------------
+
+Use the provided Thai document as one of the primary test documents.
+
+The sample is a Thai administrative work-contact/approval document.
+
+It contains information such as:
+
+- organization
+- subject
+- department
+- recipient
+- date
+- approval checkbox
+- attachment
+- explanation
+- company name
+- repair cost
+- approval section
+- signatures
+- document creator
+- approver
+
+Use it to test semantic AI editing.
+
+Test commands:
+
+"เปลี่ยนวันที่ 31 มีนาคม 2569 เป็น 5 เมษายน 2569"
+
+"เปลี่ยนจำนวนเงิน 535 บาท เป็น 850 บาท"
+
+"เปลี่ยนชื่อบริษัท ไอ แอนด์ เอ็ม คอนซัลท์จำกัด เป็น บริษัท ABC จำกัด"
+
+"เปลี่ยนชื่อผู้จัดทำเป็น นายสมชาย ใจดี"
+
+"ทำให้ข้อความส่วนเหตุผลกระชับขึ้น"
+
+"ตรวจคำผิดในเอกสารนี้"
+
+The AI must show exactly what it intends to change before applying.
+
+--------------------------------------------------
+19. DOCUMENT INTELLIGENCE
+--------------------------------------------------
+
+Create an internal document representation.
+
+Conceptually:
+
+Document
+ ├── Metadata
+ ├── Sections
+ ├── Paragraphs
+ ├── Tables
+ ├── Runs
+ ├── Images
+ ├── Headers
+ ├── Footers
+ └── Semantic Entities
+
+Each text element should have an internal identifier.
+
+Example:
+
+paragraph_12
+run_12_03
+entity_date_02
+
+This allows the AI to target a precise part of the document instead of replacing the entire document.
+
+--------------------------------------------------
+20. AI ARCHITECTURE
+--------------------------------------------------
+
+Create an abstraction layer for the AI provider.
+
+Do not hard-code the application to one AI provider.
+
+Create something like:
+
+AIService
+
+with functions conceptually similar to:
+
+analyzeDocument()
+understandCommand()
+findTarget()
+proposeEdit()
+validateEdit()
+summarizeDocument()
+rewriteText()
+checkGrammar()
+
+The application should be able to connect to an LLM API later.
+
+For the prototype, create mock AI responses if an API key is not available.
+
+Do NOT expose API keys in the frontend.
+
+--------------------------------------------------
+21. DESIGN SYSTEM
+--------------------------------------------------
+
+Use a consistent design system.
+
+Primary visual language:
+
+Glassmorphism
+
+Colors:
+
+Deep forest green
+Emerald
+Soft mint
+White
+Charcoal
+
+Avoid excessive neon.
+
+Glass panels:
+
+background:
+semi-transparent dark green/black
+
+backdrop blur:
+20–40px
+
+border:
+subtle white transparency
+
+shadow:
+soft
+
+Corners:
+18–28px
+
+Buttons:
+rounded
+soft glow
+smooth hover animation
+
+Typography:
+modern sans-serif
+macOS-like
+
+--------------------------------------------------
+22. ANIMATIONS
+--------------------------------------------------
+
+Use subtle animations.
+
+Examples:
+
+Document upload:
+file → floating card → document page
+
+AI analysis:
+small intelligent processing indicator
+
+AI change:
+highlight target → preview → apply
+
+Sidebar:
+smooth transitions
+
+Buttons:
+subtle scale / glow
+
+Do NOT over-animate.
+
+The application should feel calm and professional.
+
+--------------------------------------------------
+23. MACOS EXPERIENCE
+--------------------------------------------------
+
+Design the application as if it were a native macOS productivity application.
+
+Use:
+
+- traffic light window controls
+- sidebar
+- keyboard shortcuts
+- Command + O
+- Command + S
+- Command + Z
+- Command + Shift + Z
+- Command + K for AI command
+- Command + F for search
+
+Add a global AI command bar:
+
+"Tell Seqotia what you want to do..."
+
+Shortcut:
+
+⌘ K
+
+Example:
+
+⌘ K
+
+"เปลี่ยนวันที่เป็นวันนี้"
+
+This should become one of the signature features of Seqotia.
+
+--------------------------------------------------
+24. AI COMMAND BAR
+--------------------------------------------------
+
+Create a floating command interface inspired by Spotlight / Raycast.
+
+When activated:
+
+        What would you like to change?
+
+        🔍 เปลี่ยนวันที่เป็นวันนี้
+
+Below:
+
+Suggested actions:
+
+Change text
+Rewrite
+Summarize
+Translate
+Format
+Check grammar
+Extract information
+Create section
+
+This should feel extremely fast.
+
+--------------------------------------------------
+25. TRUST
+--------------------------------------------------
+
+Seqotia handles potentially sensitive documents.
+
+Create a strong trust experience.
+
+Show:
+
+✓ Document protected
+✓ Changes are reversible
+✓ Original document preserved
+
+Security status:
+
+"Your workspace is protected"
+
+Do not make unrealistic security claims.
+
+Create Settings for:
+
+AI processing
+Privacy
+Document storage
+Auto-save
+Version history
+Export preferences
+
+--------------------------------------------------
+26. RESPONSIVE LAYOUT
+--------------------------------------------------
+
+Primary target:
+
+macOS desktop
+
+Recommended application size:
+
+1440 × 900
+
+Also support:
+
+1280 × 800
+1680 × 1050
+1920 × 1080
+
+The interface must not break when resized.
+
+--------------------------------------------------
+27. IMPLEMENTATION
+--------------------------------------------------
+
+Build an actual functional prototype, not only static mockups.
+
+The following must work:
+
+1. Upload a document.
+2. Display the document.
+3. Extract document text.
+4. Show document structure.
+5. Open AI assistant.
+6. Enter natural-language editing commands.
+7. Generate proposed changes.
+8. Highlight the affected text.
+9. Apply changes.
+10. Undo changes.
+11. Save version history.
+12. Export edited document.
+
+If full DOCX fidelity is technically difficult in the first iteration, prioritize:
+
+A. Accurate text extraction
+B. Semantic structure
+C. AI editing workflow
+D. Visual preview
+E. Version history
+
+Then improve DOCX formatting preservation.
+
+--------------------------------------------------
+28. IMPORTANT UX PRINCIPLE
+--------------------------------------------------
+
+The user should NEVER have to think:
+
+"Where is this text?"
+
+"Which menu do I use?"
+
+"How do I edit this?"
+
+Instead they should think:
+
+"I want this changed."
+
+Then tell Seqotia.
+
+The product experience should be:
+
+SEE → ASK → PREVIEW → APPLY
+
+Not:
+
+OPEN → SEARCH → SELECT → EDIT → FORMAT → SAVE
+
+--------------------------------------------------
+29. EMPTY STATE
+--------------------------------------------------
+
+When no document is open:
+
+Large centered Seqotia leaf logo.
+
+Text:
+
+"What are we working on?"
+
+Subtitle:
+
+"Drop a document here, or tell Seqotia what you need."
+
+Buttons:
+
+Upload Document
+Create Document
+
+Drag & drop area:
+
+"Drop your document here"
+
+--------------------------------------------------
+30. POLISHED DETAILS
+--------------------------------------------------
+
+Add small details that make the product feel real:
+
+- Autosave indicator
+- "Saved just now"
+- AI processing indicator
+- document word count
+- page count
+- zoom percentage
+- last edited time
+- undo/redo
+- keyboard shortcuts
+- notification center
+- command history
+- recent files
+- favorite documents
+- document search
+
+--------------------------------------------------
+31. FINAL PRODUCT FEEL
+--------------------------------------------------
+
+The final result should feel like:
+
+"Apple built an AI document assistant."
+
+Not:
+
+"Another AI chatbot."
+
+The defining feature is:
+
+A REAL DOCUMENT
++
+UNDERSTANDS ITS STRUCTURE
++
+USER GIVES NATURAL LANGUAGE INSTRUCTION
++
+AI FINDS THE EXACT TARGET
++
+USER PREVIEWS THE CHANGE
++
+AI APPLIES THE CHANGE
++
+EVERYTHING IS REVERSIBLE
+
+Make Seqotia feel extremely fast.
+
+The user should be able to upload a document and perform a meaningful edit within seconds.
+
+Build the UI first with realistic sample data, then implement the functional document workflow.
+
+Do not stop at the dashboard.
+
+The most important screen is the Document Workspace + AI editing interaction.
+
+Prioritize this interaction above secondary dashboard features.
